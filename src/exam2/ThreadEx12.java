@@ -5,11 +5,11 @@ public class ThreadEx12 {
 		SumThread sumThread = new SumThread();
 		sumThread.start();
 		try {
-			sumThread.join();
+			sumThread.join(); // run이 끝날 때까지 기다림.
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("1~100 합: " + sumThread.getSum());
+		System.out.println("1~1000 합: " + sumThread.getSum());
 	}
 }
 
