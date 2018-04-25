@@ -2,6 +2,8 @@ package exam3;
 
 public class ThreadEx21 {
 	public static void main(String[] args) {
+
+
 		CalculatorNew calculator = new CalculatorNew();
 
 		User3 User3 = new User3();
@@ -46,7 +48,9 @@ class CalculatorNew {
 	public int getMemory() {
 		return memory;
 	}
-
+    /*
+	    µø±‚»≠
+	*/
 	public synchronized void setMemory(int memory) {
 		this.memory = memory;
 		try {

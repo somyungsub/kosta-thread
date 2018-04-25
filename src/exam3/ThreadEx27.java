@@ -1,5 +1,8 @@
 package exam3;
 
+/*
+	데드락 예제
+ */
 public class ThreadEx27 {
 	public static void main(String[] args) {
 		Message msg = new Message("process it");
@@ -56,7 +59,7 @@ class Notifier implements Runnable {
 			synchronized (msg) {
 				msg.setMsg(name + " Notifier work done");
 				msg.notify();
-				// msg.notifyAll();
+//                msg.notifyAll();
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();

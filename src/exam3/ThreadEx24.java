@@ -12,11 +12,11 @@ public class ThreadEx24 {
 			public void run() {
 				try {
 					String str = pool.get();
-					System.out.println("ì·¨ë“(" + Thread.currentThread().getName() + ") : " + str);
+					System.out.println("Ãëµæ(" + Thread.currentThread().getName() + ") : " + str);
 
 					Thread.sleep(3000);
 
-					System.out.println("?•´? œ(" + Thread.currentThread().getName() + ") : " + str);
+					System.out.println("Ãß°¡(" + Thread.currentThread().getName() + ") : " + str);
 					pool.add(str);
 
 				} catch (InterruptedException e) {

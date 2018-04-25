@@ -1,8 +1,12 @@
 package exam3;
 
+import java.util.Collections;
+
 public class ThreadEx20 {
 	public static void main(String[] args) {
-		Calculator calculator = new Calculator();
+
+//        Collections.syschroXXX()  // 동기화추가
+        Calculator calculator = new Calculator();
 
 		User1 user1 = new User1();
 		user1.setCalculator(calculator);
