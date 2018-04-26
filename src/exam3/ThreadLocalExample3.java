@@ -31,10 +31,15 @@ class ThreadLocalTest extends Thread {
     }
 }
 
+/*
+	데코레이션 패턴
+ */
 class MyThreadLocal {
 
+    // 외부 공개 x : 제네닉스 (Token)
 	private static final ThreadLocal<Token> userThreadLocal = new ThreadLocal<Token>();
 
+	// Token 객체만 저장하는 메서드
 	public static void set(Token user) {
 		System.out.println(Thread.currentThread().getName() + " 스레드로 부터 " + userThreadLocal + " 객체에 Token 객체 설정 !!");
 		userThreadLocal.set(user);

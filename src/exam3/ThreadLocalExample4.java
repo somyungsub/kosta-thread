@@ -21,6 +21,7 @@ public class ThreadLocalExample4 {
 
 class ThreadLocalThread extends Thread {
 	static ThreadLocal<Integer> threadLocalValue = new ThreadLocal<Integer>() {
+
 		@Override
 		protected Integer initialValue() {
 			return new Random().nextInt(100);

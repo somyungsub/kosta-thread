@@ -9,7 +9,13 @@ public class ThreadGroupExample2 {
 		autoSaveThread.setName("AutoSaveThread");
 		autoSaveThread.setDaemon(true);
 		autoSaveThread.start();
-		
+
+		// printStackTrace -> Exception 클래스가 가지고 있음
+        /*
+            map     : 기동된 쓰레드들
+            key     : 쓰레드객체
+            value   : StackTraceElement 배열 (정보보관)
+         */
 		Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
 		Set<Thread> threads = map.keySet();
 		for(Thread thread : threads) {
