@@ -12,7 +12,9 @@ public class ThreadPoolEx5 {
 		);
 		
 		System.out.println("[작업 처리 요청]");
+		// call 메서드의 리턴 타입 => 제네닉스 타입
 		Callable<Integer> task = new Callable<Integer>() {
+
 			@Override
 			public Integer call() throws Exception {
 				int sum = 0;
@@ -27,10 +29,10 @@ public class ThreadPoolEx5 {
 				return sum;
 			}
 		};
-		Future<Integer> future = executorService.submit(task);
+		Future<Integer> future = executorService.submit(task);  // Callable 리턴값 저장 객체(Future)
 		
 		try {
-			int sum = future.get();
+			int sum = future.get();	// 작업처리가 완료 될 때까지 대기를 함.
 			System.out.println("[처리 결과] " + sum);
 			System.out.println("[작업 처리 정상 종료]");
 		} catch (Exception e) {
